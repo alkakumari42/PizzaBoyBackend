@@ -1,4 +1,4 @@
-package com.pizzaboy.backend.health;
+package com.pizzaboy.backend.controller;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
