@@ -26,4 +26,9 @@ public class MenuController {
     public List<Item> getMenu() {
         return itemDynamoDBRepository.getMenu();
     }
+
+    @GetMapping("/id")
+    public Item getItem(String id) {
+        return itemDynamoDBRepository.findByItemId(id);
+    }
 }

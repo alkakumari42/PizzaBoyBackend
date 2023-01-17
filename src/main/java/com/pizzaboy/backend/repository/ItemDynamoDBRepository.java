@@ -23,4 +23,8 @@ public class ItemDynamoDBRepository {
         itemRepository.findAll().forEach(list::add);
         return list;
     }
+
+    public Item findByItemId(String id) {
+        return itemRepository.findById(id).orElse(new Item());
+    }
 }
