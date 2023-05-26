@@ -10,4 +10,9 @@ public class HealthCheckController {
     String healthCheck() {
         return "Healthy";
     }
+
+    @GetMapping(value="/actuator")
+    public String actuator() {
+        return "Spring Boot ACtuator";
+    }
 }

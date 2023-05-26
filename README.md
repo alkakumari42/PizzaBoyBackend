@@ -59,7 +59,9 @@ Online Pizza Delivery App
 
 ## Build & Deploy Process
 1. Install Git, mvn and JDK - set MAVEN_HOME & JAVA_HOME to env variable and path (Windows specific)
-2. Build Steps : mvn clean && mvn install && mvn compile && mvn spring-boot:run
+2. Build Steps :Run local Dynamo DB(see below for details)-  mvn clean && mvn install && mvn compile && mvn spring-boot:run
+3. Run Dynamo Db Locally - run DynamoDBLocal.jar using below command.
+4. java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
 
 //Pom.xml - error faced
 

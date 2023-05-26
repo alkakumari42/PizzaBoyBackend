@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = {}, maxAge = 3600)
 @RequestMapping("/order")
 @RequiredArgsConstructor
 public class OrderController {
@@ -24,6 +25,7 @@ public class OrderController {
     public String createOrder(@RequestBody Order order) {
         order.setStatus(Status.WAITING_FOR_CONFIRMATION.getName());
         //TODO validate order
+        System.out.println("Order Creation Req = "+order.toString());
         return orderRepository.save(order).getId();
     }
 
